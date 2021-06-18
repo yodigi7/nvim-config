@@ -34,6 +34,7 @@
 
  " Fuzzy file finder CTRL P
  Plug 'kien/ctrlp.vim'
+ let g:ctrlp_working_path_mode = 'ra'
 
  " PyCharm/VS Code IDE stuff
  let g:loaded_python_provider = 0
@@ -60,7 +61,6 @@
 
  " All of your Plugs must be added before the following line
  call plug#end()            " required
- filetype plugin indent on    " required
  " To ignore plugin indent changes, instead use:
  filetype plugin on
  "
@@ -89,8 +89,6 @@
  set number relativenumber
  set nu rnu
 
- syntax on " Syntax highlighting
-
  set tabstop=4
  set softtabstop=4
 
@@ -99,8 +97,6 @@
  set shiftwidth=4
 
  set cursorline " Highlight current line
-
- set wildmenu
 
  set foldenable
  set foldlevelstart=5
@@ -111,13 +107,8 @@
 
  set ignorecase " case insensitive search
  set smartcase " If there are uppercase letters, become case-sensitive.
- set incsearch " live incremental searching
  set showmatch " live match highlighting
  set hlsearch " highlight matches
-
- set laststatus=2
-
- set autoread " Auto update when something else changes it
 
  set magic " Allows for more common regex
 
@@ -134,15 +125,9 @@
  set si   " Smart indent
  set wrap " Wrap lines
 
- set list listchars=trail:~,extends:> " Show trailing whitespace as ~
-
  let mapleader=" "
 
- if !has('gui_running')
-   set t_Co=256
- endif
-
- set encoding=utf-8
+ " set encoding=utf-8
  let g:notes_unicode_enabled = 1
 " end
 
